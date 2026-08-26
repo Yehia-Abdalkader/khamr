@@ -1,0 +1,17 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups
+*.bak
+*.tmp
+
+# Editor directories
+.vscode/
+.idea/
+
+# Local Netlify folder
+.netlify
+
+.vercel

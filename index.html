@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khamr Elsaleheen — خمر الصالحين | Bakery · Pastry · Specialty Coffee</title>
+<meta name="description" content="Khamr Elsaleheen — an Egyptian bakery, pastry and specialty coffee brand born in Suez in 2020. Tusker hubban, la khamran — we intoxicate with love, not wine.">
+<meta name="keywords" content="Khamr Elsaleheen, خمر الصالحين, bakery, pastry, specialty coffee, Suez, Cairo, El Korba, Egypt cafe">
+<meta name="author" content="Khamr Elsaleheen">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0C241A">
+<link rel="canonical" href="https://khamrelsaleheen.com/">
+
+<!-- Favicon & Icons -->
+<link rel="icon" type="image/png" href="Assets/badge-logo.png">
+<link rel="apple-touch-icon" href="Assets/badge-logo.png">
+
+<!-- Open Graph / Social Meta -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khamr Elsaleheen — خمر الصالحين | Bakery · Pastry · Specialty Coffee">
+<meta property="og:description" content="Egyptian bakery, pastry and specialty coffee brand born in Suez in 2020. Tusker hubban, la khamran — we intoxicate with love, not wine.">
+<meta property="og:url" content="https://khamrelsaleheen.com/">
+<meta property="og:image" content="Assets/badge-logo.png">
+<meta property="og:site_name" content="Khamr Elsaleheen">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_EG">
+
+<!-- Twitter Card Meta -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Khamr Elsaleheen — خمر الصالحين">
+<meta name="twitter:description" content="Bakery · Pastry · Specialty Coffee — Born in Suez, Egypt.">
+<meta name="twitter:image" content="Assets/badge-logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cairo:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink-green: #163C2C;
+    --ink-green-deep: #0C241A;
+    --maroon: #7C2732;
+    --maroon-deep: #591A22;
+    --gold: #C9A227;
+    --gold-light: #E7CB74;
+    --cream: #FAF5EA;
+    --cream-deep: #F1E7D2;
+    --charcoal: #2A2823;
+    --line: rgba(22,60,44,0.14);
+    --max: 1180px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family:'Cairo', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; height:auto; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+
+  ::selection{ background: var(--gold-light); color: var(--ink-green-deep); }
+
+  .arabic{ font-family:'IBM Plex Sans Arabic', sans-serif; direction:rtl; unicode-bidi: isolate; }
+
+  h1,h2,h3,h4{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    color: var(--ink-green-deep);
+  }
+
+  .eyebrow{
+    font-family:'Cairo', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.22em;
+    font-size:0.72rem;
+    font-weight:600;
+    color: var(--maroon);
+  }
+
+  .wrap{ max-width: var(--max); margin:0 auto; padding:0 32px; }
+
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  /* ---------- Motion ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{ opacity:0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.in{ opacity:1; transform:none; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; }
+  }
+
+  /* ---------- Focus ---------- */
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background: rgba(250,245,234,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    transition: background .3s ease;
+  }
+  .nav{
+    max-width: var(--max); margin:0 auto; padding: 14px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Cormorant Garamond', serif; font-weight:600; font-size:1.15rem;
+    color: var(--ink-green-deep);
+  }
+  .brandmark .badge-img{
+    width:34px; height:34px; border-radius:50%;
+    object-fit:cover; flex-shrink:0;
+    box-shadow: 0 0 0 1px rgba(22,60,44,0.12);
+  }
+  nav.links{ display:flex; align-items:center; gap:8px; }
+  nav.links a{
+    font-size:0.86rem; font-weight:500; color: var(--ink-green-deep);
+    position:relative; padding:8px 14px;
+    transition: color .25s ease;
+  }
+  nav.links a::after{
+    content:""; position:absolute; left:50%; bottom:2px; width:0; height:2px;
+    border-radius:2px; background: var(--gold);
+    transform: translateX(-50%);
+    transition: width .28s cubic-bezier(.4,0,.2,1);
+  }
+  nav.links a:hover{ color: var(--gold); }
+  nav.links a:hover::after{ width:22px; }
+  nav.links a.active{ color: var(--gold); font-weight:600; }
+  nav.links a.active::after{ width:22px; background: var(--gold); }
+  nav.links a.nav-cta.active,
+  nav.links a.nav-cta:hover{ color:#fff !important; }
+  nav.links a.nav-cta::after{ display:none; }
+  @media (max-width: 900px){
+    nav.links a{ padding:10px 4px; }
+    nav.links a::after{ left:0; transform:none; }
+    nav.links a:hover::after, nav.links a.active::after{ width:18px; }
+  }
+  .nav-cta{
+    background: var(--ink-green-deep); color:#fff !important; padding:9px 20px; border-radius:100px;
+    font-size:0.82rem; font-weight:600; transition: background .25s ease, transform .25s ease;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background: var(--gold); color: var(--ink-green-deep) !important; transform: translateY(-1px); }
+
+  .burger{ display:none; background:none; border:none; cursor:pointer; padding:8px; }
+  .burger span{ display:block; width:22px; height:2px; background:var(--ink-green-deep); margin:5px 0; transition: all .3s ease;}
+
+  .burger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .burger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 900px){
+    nav.links{
+      position:fixed; top:63px; left:0; right:0; background: var(--cream);
+      flex-direction:column; align-items:flex-start; padding: 20px 24px 30px;
+      border-bottom:1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transform: translateY(-140%); transition: transform .35s ease;
+      gap:18px;
+    }
+    nav.links.open{ transform: translateY(0); }
+    .burger{ display:block; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height: 700px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--ink-green-deep);
+    overflow:hidden;
+    padding-top: 64px;
+  }
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding-bottom: 60px;
+    }
+  }
+
+  .hero-left{
+    position:relative;
+    display:flex; flex-direction:column; justify-content:center;
+    padding: clamp(40px, 6vw, 80px) clamp(32px, 5vw, 60px) clamp(40px, 5vw, 60px) clamp(32px, 5vw, 60px);
+    color: var(--cream);
+    z-index:2;
+  }
+  @media (max-width:900px){ .hero-left{ padding: clamp(30px, 5vw, 50px) clamp(20px, 5vw, 30px); align-items:center; text-align:center; } }
+
+  .hero-pattern{
+    position:absolute; inset:0; opacity:0.16; pointer-events:none;
+  }
+
+  .hero-logo-img{
+    width: clamp(200px, 50vw, 300px); height:auto; margin-bottom: clamp(8px, 1.5vw, 16px);
+  }
+  .hero-en{
+    font-family:'Cormorant Garamond', serif; font-size: clamp(1.15rem, 3vw, 1.5rem); font-weight:400; color: var(--cream-deep);
+    margin-bottom: clamp(6px, 0.8vw, 10px); letter-spacing:0.01em;
+  }
+  .hero-tagline-img{ width: clamp(160px, 35vw, 240px); height:auto; margin-bottom: clamp(16px, 2vw, 24px); }
+  .hero-tagline-en{ font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--gold-light); margin-bottom: clamp(12px, 1.5vw, 18px); font-family:'Caveat', cursive; font-weight:600; }
+
+  .hero-cta-row{ display:flex; gap:16px; flex-wrap:wrap; margin-top: 8px; }
+  @media (max-width:900px){ .hero-cta-row{ justify-content:center; } }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 13px 26px; border-radius:100px; font-size:0.88rem; font-weight:600;
+    border:1px solid transparent; cursor:pointer; transition: all .25s ease;
+  }
+  .btn-gold{ background: var(--gold); color: var(--ink-green-deep); }
+  .btn-gold:hover{ background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(201,162,39,0.25); }
+  .btn-outline{ border-color: rgba(250,245,234,0.4); color: var(--cream); }
+  .btn-outline:hover{ border-color: var(--cream); background: rgba(250,245,234,0.08); transform: translateY(-2px); }
+
+  .hero-right{
+    position:relative;
+    background: linear-gradient(160deg, var(--ink-green-deep) 0%, #081711 100%);
+    display:flex; align-items:center; justify-content:center;
+    padding: 40px;
+    overflow:hidden;
+  }
+  .hero-right img{
+    max-width: clamp(180px, 45vw, 340px);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+  }
+  .hero-right svg{ 
+    width: clamp(220px, 50vw, 420px); 
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  @media (max-width:900px){
+    .hero-right{ padding: 20px 20px 40px; }
+    .hero-right img{
+      max-width: clamp(140px, 60vw, 240px);
+    }
+    .hero-right svg{
+      width: clamp(180px, 65vw, 300px);
+      height: auto;
+    }
+  }
+
+  .hero-scroll{
+    position:absolute; bottom: clamp(16px, 3vw, 26px); left: clamp(20px, 5vw, 60px); z-index:3;
+    display:flex; align-items:center; gap:10px; color: rgba(250,245,234,0.6);
+    font-size: clamp(0.65rem, 1.8vw, 0.72rem); letter-spacing:0.15em; text-transform:uppercase;
+  }
+  @media (max-width:900px){ .hero-scroll{ display:none; } }
+  .hero-scroll .line{ width:34px; height:1px; background: rgba(250,245,234,0.5); }
+
+  /* ---------- Section basics ---------- */
+  section{ padding: 80px 0; position:relative; }
+  @media (max-width:640px){ section{ padding: 60px 0; } }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head .eyebrow{ margin-bottom:14px; display:block; }
+  .section-head h2{ font-size: clamp(1.9rem, 3.4vw, 2.6rem); margin-bottom:16px; }
+  .section-head p{ color:#4b473e; font-size:1.02rem; }
+
+  .divider{
+    height:1px; background: var(--line); max-width: var(--max); margin: 0 auto;
+  }
+
+  /* ---------- About ---------- */
+  .about{ background: var(--cream); }
+  .about-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:70px; align-items:start; }
+  @media (max-width:860px){ .about-grid{ grid-template-columns:1fr; gap:40px; } }
+  .about-text p{ margin-bottom:18px; font-size:1.06rem; color:#3b382f; }
+  .about-text p strong{ color: var(--ink-green-deep); }
+
+  .about-stats{ display:grid; grid-template-columns: 1fr 1fr; gap:1px; background: var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden;}
+  .stat{ background: var(--cream-deep); padding:28px 24px; }
+  .stat .num{ font-family:'Cormorant Garamond', serif; font-size:2.1rem; color: var(--maroon); font-weight:500; }
+  .stat .lbl{ font-size:0.82rem; color:#5c584d; margin-top:6px; }
+
+  /* ---------- Name story ---------- */
+  .story{ background: var(--ink-green-deep); color: var(--cream); position:relative; overflow:hidden;}
+  .story::before{
+    content:""; position:absolute; inset:0;
+    background-image: radial-gradient(circle at 15% 20%, rgba(201,162,39,0.08), transparent 40%), radial-gradient(circle at 85% 80%, rgba(124,39,50,0.25), transparent 45%);
+    pointer-events:none;
+  }
+  .story .eyebrow{ color: var(--gold-light); }
+  .story h2{ color:#fff; }
+  .story-scroll{
+    position:relative; z-index:1;
+    background: rgba(250,245,234,0.04);
+    border:1px solid rgba(250,245,234,0.14);
+    border-radius: 18px;
+    padding: 48px;
+    margin-top: 20px;
+  }
+  @media (max-width:640px){ .story-scroll{ padding:28px 22px; } }
+  .story-scroll p{ color: rgba(250,245,234,0.82); margin-bottom:16px; font-size:1.02rem; }
+  .story-scroll p:last-child{ margin-bottom:0; }
+  .story-year{
+    display:inline-flex; align-items:center; gap:10px; color: var(--gold-light);
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.3rem; margin-bottom:20px;
+  }
+  .story-quote{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.35rem; color:#fff;
+    border-left: 2px solid var(--gold); padding-left:20px; margin: 26px 0; line-height:1.5;
+  }
+  .story-ar-toggle{
+    margin-top:26px; display:inline-flex; align-items:center; gap:8px;
+    color: var(--gold-light); font-size:0.85rem; font-weight:600; cursor:pointer;
+    background:none; border:1px solid rgba(201,162,39,0.4); padding:9px 18px; border-radius:100px;
+    transition: background .2s ease, border-color .2s ease;
+  }
+  .story-ar-toggle:hover{ background: rgba(201,162,39,0.12); border-color: var(--gold-light); }
+  .story-ar-body{
+    display:none; margin-top:22px; padding-top:22px; border-top:1px dashed rgba(250,245,234,0.2);
+  }
+  .story-ar-body.show{ display:block; }
+  .story-ar-body p{ font-family:'IBM Plex Sans Arabic', sans-serif; direction:rtl; font-size:1.2rem; line-height:2; color: rgba(250,245,234,0.9); margin-bottom:14px; }
+
+  .name-meaning{
+    display:flex; gap:16px; align-items:center; margin-top:34px; flex-wrap:wrap;
+  }
+  .name-logo-img{
+    width:100%; max-width:420px; height:auto; display:block; margin:6px 0;
+  }
+  @media (max-width:640px){ .name-logo-img{ max-width:300px; } }
+
+  /* ---------- Vision Mission ---------- */
+  .vm{ background: var(--cream-deep); }
+  .vm-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background: var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden; }
+  @media (max-width:760px){ .vm-grid{ grid-template-columns:1fr; } }
+  .vm-card{ background: var(--cream); padding: 48px 44px; }
+  .vm-card .eyebrow{ margin-bottom:12px; display:block;}
+  .vm-card h3{ font-size:1.7rem; margin-bottom:18px; }
+  .vm-card p{ color:#48453b; font-size:1.02rem; }
+
+  /* ---------- Values ---------- */
+  .values{ background: var(--cream); }
+  .values-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:2px; background: var(--line); border:1px solid var(--line); border-radius:16px; overflow:hidden;}
+  .value-card{ background: var(--cream); padding:34px 28px; }
+  .value-card svg{ width:30px; height:30px; color: var(--maroon); margin-bottom:18px; }
+  .value-card h4{ font-size:1.05rem; margin-bottom:10px; font-weight:600; }
+  .value-card p{ font-size:0.92rem; color:#5c584d; }
+
+  /* ---------- What we do ---------- */
+  .wwd{ background: var(--ink-green-deep); color:#fff; }
+  .wwd .eyebrow{ color: var(--gold-light); }
+  .wwd h2{ color:#fff; }
+  .wwd .section-head p{ color: rgba(250,245,234,0.72); }
+  .pillars{ display:grid; grid-template-columns: repeat(3,1fr); gap:26px; }
+  @media (max-width:860px){ .pillars{ grid-template-columns:1fr; } }
+  .pillar{
+    background: rgba(250,245,234,0.045);
+    border:1px solid rgba(250,245,234,0.14);
+    border-radius:18px; padding:38px 32px;
+    transition: transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .pillar:hover{ transform: translateY(-6px); border-color: var(--gold); background: rgba(250,245,234,0.07); }
+  .pillar svg{ width:44px; height:44px; color: var(--gold-light); margin-bottom:22px; }
+  .pillar h3{ color:#fff; font-size:1.35rem; margin-bottom:8px; }
+  .pillar .tag{ color: var(--gold-light); font-size:0.85rem; font-style:italic; font-family:'Cormorant Garamond', serif; margin-bottom:16px; display:block;}
+  .pillar p{ color: rgba(250,245,234,0.72); font-size:0.95rem; margin-bottom:18px;}
+  .pillar ul{ display:flex; flex-direction:column; gap:10px; }
+  .pillar li{ font-size:0.86rem; color: rgba(250,245,234,0.85); display:flex; gap:10px; align-items:baseline; }
+  .pillar li::before{ content:""; width:5px; height:5px; border-radius:50%; background: var(--gold); flex-shrink:0; margin-top:6px; }
+
+  /* ---------- Journey ---------- */
+  .journey{ background: var(--cream); }
+  .timeline{ position:relative; margin-top:20px; }
+  .timeline::before{
+    content:""; position:absolute; left:19px; top:10px; bottom:10px; width:1px;
+    background: var(--line);
+  }
+  @media (max-width:640px){ .timeline::before{ left:15px; } }
+  .t-item{ position:relative; padding-left:64px; margin-bottom:52px; }
+  @media (max-width:640px){ .t-item{ padding-left:48px; } }
+  .t-item:last-child{ margin-bottom:0; }
+  .t-dot{
+    position:absolute; left:0; top:2px; width:40px; height:40px; border-radius:50%;
+    background: var(--ink-green-deep); color: var(--gold-light);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif; font-size:0.78rem; font-weight:600;
+    border:3px solid var(--cream); box-shadow: 0 0 0 1px var(--line);
+  }
+  @media (max-width:640px){ .t-dot{ width:32px; height:32px; font-size:0.65rem; } }
+  .t-item h3{ font-size:1.3rem; margin-bottom:4px; }
+  .t-item .t-loc{ color: var(--maroon); font-weight:600; font-size:0.86rem; margin-bottom:10px; display:block; }
+  .t-item p{ color:#4b473e; max-width:600px; }
+
+  /* ---------- Quality ---------- */
+  .quality{ background: var(--cream-deep); }
+  .q-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:1px; background: var(--line); border:1px solid var(--line); border-radius:16px; overflow:hidden; margin-top:10px;}
+  @media (max-width:860px){ .q-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width:520px){ .q-grid{ grid-template-columns: 1fr; } }
+  .q-card{ background: var(--cream); padding:32px 26px; }
+  .q-card .q-num{ font-family:'Cormorant Garamond', serif; font-style:italic; color: var(--gold); font-size:1.6rem; margin-bottom:14px; display:block;}
+  .q-card h4{ font-size:1.02rem; margin-bottom:8px; }
+  .q-card p{ font-size:0.9rem; color:#5c584d; }
+
+  /* ---------- Experience / why ---------- */
+  .experience{ background: var(--cream); }
+  .exp-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  @media (max-width:860px){ .exp-grid{ grid-template-columns:1fr; gap:44px; } }
+  .exp-list{ display:flex; flex-direction:column; }
+  .exp-row{ display:flex; gap:18px; padding: 18px 0; border-bottom:1px solid var(--line); }
+  .exp-row:first-child{ padding-top:0; }
+  .exp-row svg{ width:22px; height:22px; color: var(--maroon); flex-shrink:0; margin-top:3px;}
+  .exp-row h4{ font-size:1rem; margin-bottom:4px; font-weight:600; }
+  .exp-row p{ font-size:0.9rem; color:#5c584d; }
+
+  /* ---------- Coffee origin ---------- */
+  .origin{ background: var(--ink-green-deep); color:#fff; }
+  .origin .eyebrow{ color: var(--gold-light); }
+  .origin h2{ color:#fff; }
+  .origin .section-head p{ color: rgba(250,245,234,0.72); }
+  .origin-cards{ display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; margin-bottom:34px; }
+  @media (max-width:900px){ .origin-cards{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width:520px){ .origin-cards{ grid-template-columns: 1fr; } }
+  .o-card{
+    background: rgba(250,245,234,0.05); border:1px solid rgba(250,245,234,0.14);
+    border-radius:16px; padding:28px 24px;
+  }
+  .o-card .o-country{ font-family:'Cormorant Garamond', serif; font-size:1.25rem; color: var(--gold-light); margin-bottom:4px; }
+  .o-card .o-var{ font-size:0.78rem; color: rgba(250,245,234,0.55); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px; }
+  .o-card .o-notes{ font-size:0.88rem; color: rgba(250,245,234,0.82); font-style:italic; font-family:'Cormorant Garamond', serif; line-height:1.5;}
+  .o-chips{ display:flex; flex-wrap:wrap; gap:10px; }
+  .o-chip{
+    border:1px solid rgba(250,245,234,0.25); border-radius:100px; padding:8px 18px;
+    font-size:0.82rem; color: rgba(250,245,234,0.8);
+  }
+
+  /* ---------- Locations ---------- */
+  .locations{ background: var(--cream); }
+  .loc-wrap{ display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center; }
+  @media (max-width:900px){ .loc-wrap{ grid-template-columns:1fr; gap:40px; } }
+  .loc-map{ background: var(--cream-deep); border-radius:20px; padding:24px 24px 16px; border:1px solid var(--line); }
+  .loc-map-inner{ position:relative; line-height:0; }
+  .egypt-map-img{ width:100%; height:auto; display:block; border-radius:10px; }
+  .loc-map-hint{ text-align:center; font-size:0.78rem; color:#7a7666; margin-top:12px; letter-spacing:0.02em; }
+
+  .map-hotspot{
+    position:absolute; width:44px; height:44px; border-radius:50%;
+    transform: translate(-50%,-50%); cursor:pointer;
+    box-shadow: 0 0 0 0 rgba(201,162,39,0);
+    transition: box-shadow .3s ease;
+  }
+  .map-hotspot:hover, .map-hotspot:focus-visible{
+    box-shadow: 0 0 0 9px rgba(201,162,39,0.32);
+    outline:none;
+  }
+
+  .suez-spot{ display:flex; align-items:flex-start; justify-content:center; padding-bottom:26px; }
+  .hotspot-menu{
+    position:absolute; left:50%; top:100%; transform: translateX(-50%) translateY(2px);
+    background: var(--ink-green-deep); border-radius:16px; padding:26px 28px 24px;
+    box-shadow: 0 14px 34px rgba(12,36,26,0.4);
+    display:flex; flex-direction:column; gap:14px; min-width:230px;
+    opacity:0; pointer-events:none; transition: opacity .18s ease .12s, transform .18s ease .12s;
+    z-index:5;
+  }
+  .suez-spot:hover .hotspot-menu, .suez-spot:focus-within .hotspot-menu{
+    opacity:1; pointer-events:auto; transform: translateX(-50%) translateY(0);
+    transition: opacity .18s ease, transform .18s ease;
+  }
+  .hotspot-menu-title{ font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--gold-light); margin-bottom:2px; }
+  .hotspot-menu a{ font-size:1.05rem; font-weight:600; color:#fff; padding:4px 0; transition: color .2s ease; }
+  .hotspot-menu a:hover{ color: var(--gold-light); }
+  .loc-list{ display:flex; flex-direction:column; gap:22px; }
+  .loc-item{
+    display:flex; gap:16px; align-items:flex-start; padding:20px; border:1px solid var(--line);
+    border-radius:14px; transition: border-color .25s ease, background .25s ease, transform .25s ease;
+    position:relative;
+  }
+  .loc-item:hover{ border-color: var(--maroon); background: var(--cream-deep); transform: translateX(4px); }
+  .loc-item .pin{
+    width:38px; height:38px; border-radius:50%; background: var(--ink-green-deep); color: var(--gold-light);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .loc-item .pin svg{ width:18px; height:18px; }
+  .loc-item h4{ font-size:1.05rem; margin-bottom:3px; }
+  .loc-item .since{ font-size:0.78rem; color: var(--maroon); font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px; display:block;}
+  .loc-item p{ font-size:0.88rem; color:#5c584d; }
+  .loc-item .go{
+    width:18px; height:18px; color: var(--maroon); flex-shrink:0; margin-left:auto; margin-top:4px;
+    opacity:0; transform: translate(-4px,4px); transition: opacity .25s ease, transform .25s ease;
+  }
+  .loc-item:hover .go{ opacity:1; transform:translate(0,0); }
+
+  /* ---------- Growth ---------- */
+  .growth{ background: var(--ink-green-deep); color:#fff; }
+  .growth .eyebrow{ color: var(--gold-light); }
+  .growth h2{ color:#fff; }
+  .growth .section-head p{ color: rgba(255,255,255,0.78); }
+  .growth-row{ display:grid; grid-template-columns: repeat(5,1fr); gap:1px; background: rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.18); border-radius:16px; overflow:hidden; }
+  @media (max-width:900px){ .growth-row{ grid-template-columns: repeat(2,1fr);} }
+  @media (max-width:520px){ .growth-row{ grid-template-columns: 1fr; } }
+  .g-card{ background: var(--ink-green-deep); padding:30px 22px; }
+  .g-card h4{ color: var(--gold-light); font-size:1.02rem; margin-bottom:8px; font-family:'Cormorant Garamond', serif; font-style:italic; }
+  .g-card p{ font-size:0.86rem; color: rgba(255,255,255,0.78); }
+
+  /* ---------- CTA / Menu ---------- */
+  .menu-cta{ background: var(--cream); border-top: 1px solid var(--line); }
+  .menu-cta-inner{
+    display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
+    padding: 56px 0;
+  }
+  .menu-cta-text{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .menu-cta-tagline{ width:60px; height:auto; opacity:0.9; flex-shrink:0; }
+  .menu-cta h2{ font-size: clamp(1.6rem,3vw,2.1rem); color: var(--ink-green-deep); max-width:560px;}
+  .menu-cta .btn-dark{ background: var(--ink-green-deep); color: #fff; }
+  .menu-cta .btn-dark:hover{ background: var(--maroon-deep); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(12,36,26,0.2); }
+
+  /* ---------- Footer ---------- */
+  footer{ background: var(--ink-green-deep); color: rgba(250,245,234,0.75); padding: 70px 0 30px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom:60px;}
+  @media (max-width:860px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width:520px){ .foot-grid{ grid-template-columns: 1fr; } }
+  .foot-brand .brandmark{ color:#fff; margin-bottom:16px; }
+  .foot-logo-img{ width:190px; height:auto; margin-bottom:16px; opacity:0.92; }
+  .foot-brand p{ font-size:0.88rem; color: rgba(250,245,234,0.6); max-width:280px; }
+  .foot-col h5{ font-family:'Cairo', sans-serif; text-transform:uppercase; letter-spacing:0.14em; font-size:0.72rem; color: var(--gold-light); margin-bottom:18px; font-weight:600;}
+  .foot-col a, .foot-col span{ display:block; font-size:0.88rem; margin-bottom:12px; color: rgba(250,245,234,0.72); transition: color .2s ease; }
+  .foot-col a:hover{ color:#fff; }
+  .foot-social{ display:flex; gap:12px; margin-top:6px; }
+  .foot-social a{
+    width:38px; height:38px; border-radius:50%; border:1px solid rgba(250,245,234,0.25);
+    display:flex; align-items:center; justify-content:center; margin-bottom:0;
+    transition: all .25s ease;
+  }
+  .foot-social a:hover{ background: var(--gold); border-color: var(--gold); color: var(--ink-green-deep); transform: translateY(-2px); }
+  .foot-social svg{ width:17px; height:17px; }
+  .foot-bottom{
+    border-top:1px solid rgba(250,245,234,0.14); padding-top:26px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:0.8rem; color: rgba(250,245,234,0.5);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="brandmark"><img class="badge-img" src="Assets/badge-logo.png" alt="Khamr Elsaleheen"> Khamr Elsaleheen</a>
+    <nav class="links" id="navLinks">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#story" data-nav="story">Our Name</a>
+      <a href="#what-we-do" data-nav="what-we-do">What We Do</a>
+      <a href="#journey" data-nav="journey">Journey</a>
+      <a href="#locations" data-nav="locations">Locations</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+      <a class="nav-cta" href="https://m-khomrelsalhein-shop.geideapos.net/en/59a82990-a47b-4a9d-8a8f-ec1278251683/shop/category/9be2a000-830f-48f6-b490-66f58496a948" target="_blank" rel="noopener noreferrer">View Menu</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-left">
+    <svg class="hero-pattern" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="arch" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M20 0 L40 20 L20 40 L0 20 Z" fill="none" stroke="#C9A227" stroke-width="0.8" opacity="0.35"/>
+          <circle cx="20" cy="20" r="2.5" fill="#C9A227" opacity="0.25"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#arch)"/>
+    </svg>
+    <img src="Assets/z-logo-white-small.png" alt="Khamr Elsaleheen" class="hero-logo-img">
+    <img src="Assets/slogan-horizontal.png" alt="Tusker hubban la khamran — We intoxicate with love, not wine" class="hero-tagline-img">
+    <div class="hero-cta-row">
+      <a href="#about" class="btn btn-gold">Discover Our Story</a>
+      <a href="https://m-khomrelsalhein-shop.geideapos.net/en/59a82990-a47b-4a9d-8a8f-ec1278251683/shop/category/9be2a000-830f-48f6-b490-66f58496a948" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Menu</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- cup -->
+      <g transform="translate(120,200)">
+        <path d="M0 0 h260 l-24 200 a30 30 0 0 1-30 26 H54 a30 30 0 0 1-30-26 Z" fill="rgba(231,203,116,0.06)" stroke="#E7CB74" stroke-width="2.2"/>
+        <path d="M260 30 q60 -8 60 45 q0 55 -66 60" fill="none" stroke="#E7CB74" stroke-width="2.2"/>
+        <ellipse cx="130" cy="0" rx="130" ry="16" fill="#E7CB74" opacity="0.14"/>
+        <ellipse cx="130" cy="0" rx="130" ry="16" fill="none" stroke="#E7CB74" stroke-width="2.2"/>
+        <path d="M70 -6 C95 -30, 165 -30, 190 -6 C165 6, 95 6, 70 -6 Z" fill="#E7CB74" opacity="0.5"/>
+      </g>
+      <!-- steam -->
+      <g stroke="#E7CB74" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round">
+        <path d="M190 170 q-14 -24 0 -46 q14 -22 0 -46"/>
+        <path d="M250 170 q-14 -24 0 -46 q14 -22 0 -46"/>
+        <path d="M310 170 q-14 -24 0 -46 q14 -22 0 -46"/>
+      </g>
+      <!-- wheat left -->
+      <g transform="translate(50,110)" stroke="#E7CB74" stroke-width="1.6" fill="none" opacity="0.7">
+        <line x1="0" y1="0" x2="0" y2="120"/>
+        <path d="M0 10 q-16 0 -16 16 q16 0 16 -16 M0 10 q16 0 16 16 q-16 0 -16 -16"/>
+        <path d="M0 34 q-16 0 -16 16 q16 0 16 -16 M0 34 q16 0 16 16 q-16 0 -16 -16"/>
+        <path d="M0 58 q-16 0 -16 16 q16 0 16 -16 M0 58 q16 0 16 16 q-16 0 -16 -16"/>
+        <path d="M0 82 q-16 0 -16 16 q16 0 16 -16 M0 82 q16 0 16 16 q-16 0 -16 -16"/>
+      </g>
+      <!-- wheat right -->
+      <g transform="translate(450,110)" stroke="#E7CB74" stroke-width="1.6" fill="none" opacity="0.7">
+        <line x1="0" y1="0" x2="0" y2="120"/>
+        <path d="M0 10 q-16 0 -16 16 q16 0 16 -16 M0 10 q16 0 16 16 q-16 0 -16 -16"/>
+        <path d="M0 34 q-16 0 -16 16 q16 0 16 -16 M0 34 q16 0 16 16 q-16 0 -16 -16"/>
+        <path d="M0 58 q-16 0 -16 16 q16 0 16 -16 M0 58 q16 0 16 16 q-16 0 -16 -16"/>
+        <path d="M0 82 q-16 0 -16 16 q16 0 16 -16 M0 82 q16 0 16 16 q-16 0 -16 -16"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-scroll"><span class="line"></span>Scroll to explore</div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <span class="eyebrow">About Khamr Elsaleheen</span>
+        <h2 style="font-size:2.2rem; margin:14px 0 26px;">More than coffee. A complete experience.</h2>
+        <p>Khamr Elsaleheen is a <strong>bakery, pastry and specialty coffee brand</strong> founded in Suez, Egypt, in 2020.</p>
+        <p>Built around a passion for quality and craftsmanship, we bring together freshly baked products, handcrafted pastries and carefully prepared specialty coffee under one distinctive brand.</p>
+        <p>Our philosophy is simple: use quality ingredients, respect the craft, and create an experience worth coming back to.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><div class="num">2020</div><div class="lbl">Founded in Suez, Egypt</div></div>
+        <div class="stat"><div class="num">3</div><div class="lbl">Branches across Suez &amp; Cairo</div></div>
+        <div class="stat"><div class="num">3</div><div class="lbl">Experiences — Bakery, Pastry, Coffee</div></div>
+        <div class="stat"><div class="num">7+</div><div class="lbl">Coffee origins we roast from</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- ===================== NAME STORY ===================== -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Story Behind Our Name</span>
+      <h2>A drink that clears the mind, not one that clouds it.</h2>
+    </div>
+    <div class="story-scroll reveal">
+      <div class="story-year">&#10022; Mecca, 1511</div>
+      <p>In the year 1511, in the city of Mecca, people began gathering in new kinds of places to drink a curious, aromatic brew whose name was still strange to them: qahwa. The scent of roasted beans filled the air, and laughter echoed between the cups.</p>
+      <p>The city soon fell into debate. Scholars and merchants argued over this new drink — some declared it forbidden, like wine, believing it clouded the mind and pulled people away from devotion. Coffeehouses spread quickly, until word reached the governor of Mecca himself, who grew alarmed, condemned the drink as a corrupting distraction, and ordered the houses closed.</p>
+      <p>The dispute travelled onward — to Cairo, and then to the Ottoman Sultan's palace in Istanbul. There, scholars gathered to taste the drink for themselves and weigh its truth.</p>
+      <p class="story-quote">"It carries no drunkenness, no clouding of the mind — it does not take the intellect away. It sharpens it, and it deserves to be welcomed."</p>
+      <p>And so the verdict was given: coffee was lawful. The coffeehouses reopened, life returned to them, and people once again filled their cups — this time seeing in the drink a symbol of clarity.</p>
+      <p>From that day on, people came to call it <em>"Khamr Elsaleheen"</em> — a drink that never intoxicates, but instead lifts the spirit and awakens the heart.</p>
+      <p>And that is where our name comes from — a name that reflects a different kind of meaning for a "drink": one that awakens the spirit rather than clouding the mind.</p>
+
+      <div class="name-meaning">
+        <img src="Assets/text-logo.png" alt="Khamr Elsaleheen Logo" class="name-logo-img" loading="lazy">
+      </div>
+
+      <button class="story-ar-toggle" id="arToggle" aria-expanded="false">
+        <span id="arToggleLabel">Read the original Arabic story</span>
+      </button>
+      <div class="story-ar-body arabic" id="arBody">
+        <p>في مكة سنة 1511م، بدأ الناس يجتمعون في مقاهٍ جديدة تقدّم شرابًا غريبًا اسمه القهوة. رائحة البن المحمص تملأ المكان، والضحكات تمتزج بأصوات الفناجين.</p>
+        <p>ضجّت المدينة بالجدل بين العلماء والتجار، بين من قال إنها حرام كالخمر، ومن رد بأنها تنبّه العقل ولا تُسكر. انتشرت المقاهي بسرعة، حتى وصل خبرها إلى والي مكة، فغضب واعتبرها فتنة تلهي الناس عن العبادة، وأمر بإغلاقها.</p>
+        <p>سافرت القضية إلى مصر، ثم إلى قصر السلطان العثماني في إسطنبول. اجتمع العلماء، وتذوّقوا القهوة ليفهموا حقيقتها.</p>
+        <p>فقال كبير العلماء بعد التأمل: "لا سُكر فيها... بل صفاء؛ إنها لا تُذهب العقول، بل تُحييها".</p>
+        <p>صدر القرار: القهوة حلال. عادت المقاهي إلى الحياة، وعاد الناس يملؤونها فرحًا، يحتسون شرابًا صار رمزًا للصفاء.</p>
+        <p>منذ ذلك اليوم، سمّاها الناس "خمر الصالحين" — شراب لا يُسكر، بل يُنير الروح ويوقظ القلب.</p>
+        <p>ومن هنا أصبحت هذه الفكرة مصدر الإلهام وراء اسمنا: خمر الصالحين — اسم يعكس مفهومًا مختلفًا لـ "الشراب" — شرابٌ يوقظ القلب بدلًا من أن يُغشي العقل.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VISION / MISSION ===================== -->
+<section class="vm">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Vision &amp; Mission</span>
+      <h2>What we're building, and why.</h2>
+    </div>
+    <div class="vm-grid reveal">
+      <div class="vm-card">
+        <span class="eyebrow">Vision</span>
+        <h3>Vision</h3>
+        <p>To build Khamr Elsaleheen into a distinctive Egyptian brand in bakery, pastry and specialty coffee — creating memorable experiences while preserving the quality, authenticity and craftsmanship that define us.</p>
+      </div>
+      <div class="vm-card">
+        <span class="eyebrow">Mission</span>
+        <h3>Mission</h3>
+        <p>Our mission is to create exceptional everyday experiences through freshly baked products, handcrafted pastries and carefully prepared specialty coffee, supported by genuine hospitality and uncompromising attention to quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CORE VALUES ===================== -->
+<section class="values" id="values">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Core Values</span>
+      <h2>Seven principles behind every cup.</h2>
+    </div>
+    <div class="values-grid reveal">
+
+      <div class="value-card">
+        <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.2 2"/></svg>
+        <h4>Quality Without Compromise</h4>
+        <p>Quality present in every ingredient, product and cup.</p>
+      </div>
+      <div class="value-card">
+        <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M4 20c0-6 4-9 8-9s8 3 8 9"/><path d="M12 11V4"/><path d="M9 6l3-2 3 2"/></svg>
+        <h4>Passion for Craft</h4>
+        <p>We respect the craft behind baking, pastry making and coffee preparation.</p>
+      </div>
+      <div class="value-card">
+        <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M12 3c3 4-1 5-1 9a4 4 0 0 0 8 0c0-3-2-4-2-7-4 1-4 3-5-2z"/></svg>
+        <h4>Freshness</h4>
+        <p>We value freshness and strive to deliver products at their best.</p>
+      </div>
+      <div class="value-card">
+        <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+        <h4>Authenticity</h4>
+        <p>We stay true to our identity, our story and the experience we want to create.</p>
+      </div>
+      <div class="value-card">
+        <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M20 8.5c0 5-8 11-8 11s-8-6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 8.5z"/></svg>
+        <h4>Hospitality</h4>
+        <p>Every guest should feel welcomed, valued and comfortable.</p>
+      </div>
+      <div class="value-card">
+        <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M4 21v-6l4-4 4 4 4-8 4 8v6z"/></svg>
+        <h4>Craftsmanship</h4>
+        <p>Attention to the details that turn ordinary products into memorable experiences.</p>
+      </div>
+      <div class="value-card">
+        <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M12 3c1 3 3 5 6 6-3 1-5 3-6 6-1-3-3-5-6-6 3-1 5-3 6-6z"/></svg>
+        <h4>Sustainability</h4>
+        <p>We aim to make responsible choices as our brand continues to grow.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT WE DO ===================== -->
+<section class="wwd" id="what-we-do">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Three experiences. One brand.</h2>
+      <p>Everything we make lives inside the same philosophy: fresh ingredients, honest craft, and a distinctive presentation.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <svg viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" aria-hidden="true"><path d="M4 12c0-4 3-7 8-7s8 3 8 7"/><path d="M3 12h18l-1.5 8h-15z"/></svg>
+        <h3>Bakery</h3>
+        <span class="tag">Freshly Baked. Every Day.</span>
+        <p>Products built around freshness, quality and consistency — from everyday favorites to carefully prepared bakery items for casual moments and memorable occasions.</p>
+        <ul>
+          <li>Freshness at the center of every product</li>
+          <li>Carefully selected ingredients</li>
+          <li>Consistent standards, every single visit</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <svg viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" aria-hidden="true"><path d="M4 10c0-3 3.5-4 8-4s8 1 8 4-3.5 4-8 4-8-1-8-4z"/><path d="M4 10v4c0 3 3.5 4 8 4s8-1 8-4v-4"/></svg>
+        <h3>Pastry</h3>
+        <span class="tag">Crafted With Precision. Made to Delight.</span>
+        <p>Craftsmanship, creativity and quality ingredients combine to create pastries that are as enjoyable to look at as they are to taste.</p>
+        <ul>
+          <li>Distinctive, memorable creativity</li>
+          <li>An experience that begins before the first bite</li>
+          <li>Ingredients chosen for flavor and consistency</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <svg viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" aria-hidden="true"><path d="M6 9h11l-1 8a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3z"/><path d="M17 10c2 0 4 1 4 3.5s-2 3-4 3"/><path d="M9 3c0 1.5-1.5 1.5-1.5 3M12.5 3c0 1.5-1.5 1.5-1.5 3"/></svg>
+        <h3>Specialty Coffee</h3>
+        <span class="tag">Coffee With Purpose.</span>
+        <p>We focus on the journey behind every cup — from selecting quality beans, to grinding, brewing and serving the final beverage.</p>
+        <ul>
+          <li>Quality beans, sourced with intention</li>
+          <li>Skilled extraction, brewing and presentation</li>
+          <li>Variety of methods for every preference</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== JOURNEY ===================== -->
+<section class="journey" id="journey">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Journey</span>
+      <h2>From one location to a distinctive brand.</h2>
+      <p>From its beginnings in Suez to its continued development, our journey has always been driven by the same ambition: a place where quality products, skilled craftsmanship and genuine hospitality come together.</p>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="t-item">
+        <div class="t-dot">2020</div>
+        <span class="t-loc">Nasser, Suez</span>
+        <h3>Where it all began</h3>
+        <p>Our journey began in December 2020 with the opening of our first branch in Nasser, Suez — originally operating under the name Z Mart — marking the foundation of what would become a growing, distinctive retail brand.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-dot">2024</div>
+        <span class="t-loc">Al Massa, Suez</span>
+        <h3>A new identity</h3>
+        <p>In July 2024 we took an important step forward with the opening of our Al Massa branch — a transformation that introduced the name Khamr Elsaleheen, expanding our presence and strengthening our position in the market.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-dot">2025</div>
+        <span class="t-loc">El Korba, Cairo</span>
+        <h3>Into a new market</h3>
+        <p>Building on this success, we continued our journey of growth by entering Korba, Cairo — carrying the Khamr Elsaleheen identity forward and bringing the brand to a wider customer base.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUALITY ===================== -->
+<section class="quality">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Quality &amp; Craftsmanship</span>
+      <h2>What we pay attention to.</h2>
+    </div>
+    <div class="q-grid reveal">
+      <div class="q-card"><span class="q-num">i.</span><h4>Ingredients</h4><p>We carefully consider the ingredients that go into our products.</p></div>
+      <div class="q-card"><span class="q-num">ii.</span><h4>Freshness</h4><p>Fresh bakery and pastry products are an essential part of our identity.</p></div>
+      <div class="q-card"><span class="q-num">iii.</span><h4>Craft</h4><p>We value the techniques, skills and attention required to create quality products.</p></div>
+      <div class="q-card"><span class="q-num">iv.</span><h4>Presentation</h4><p>We believe the experience begins before the first taste.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE + WHY US ===================== -->
+<section class="experience">
+  <div class="wrap">
+    <div class="exp-grid">
+      <div class="reveal">
+        <span class="eyebrow">The Khamr Elsaleheen Experience</span>
+        <h2 style="font-size:1.9rem; margin:14px 0 26px;">More than a product.</h2>
+        <p style="color:#4b473e; margin-bottom:10px;">Khamr Elsaleheen brings together products, people and atmosphere to create one complete experience.</p>
+        <div class="exp-list" style="margin-top:20px;">
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M4 12l6 6L20 6"/></svg>
+            <div><h4>Taste</h4><p>Quality bakery, pastry and coffee, prepared with care.</p></div>
+          </div>
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><h4>Freshness</h4><p>Products designed to be enjoyed at their very best.</p></div>
+          </div>
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M4 12c0-4 3.5-7 8-7s8 3 8 7-3.5 7-8 7-8-3-8-7z"/></svg>
+            <div><h4>Atmosphere</h4><p>A distinctive environment inspired by warmth, authenticity and character.</p></div>
+          </div>
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M3 10l9-6 9 6-9 6-9-6z"/><path d="M7 12v5c2 2 8 2 10 0v-5"/></svg>
+            <div><h4>Connections</h4><p>A place where people can meet, relax, and create memorable moments.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 style="font-size:1.9rem; margin:14px 0 26px;">Five reasons guests come back.</h2>
+        <div class="exp-list">
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M12 3v14M6 11l6 6 6-6"/></svg>
+            <div><h4>Fresh Every Day</h4><p>Fresh bakery and pastry selections, prepared with care.</p></div>
+          </div>
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M5 8l7-5 7 5v9l-7 5-7-5z"/></svg>
+            <div><h4>Quality Ingredients</h4><p>Carefully selected ingredients and coffee beans.</p></div>
+          </div>
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg>
+            <div><h4>Crafted With Care</h4><p>Attention to preparation, flavor and presentation.</p></div>
+          </div>
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><path d="M20 8.5c0 5-8 11-8 11s-8-6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 8.5z"/></svg>
+            <div><h4>Authentic Hospitality</h4><p>A welcoming experience, built around our guests.</p></div>
+          </div>
+          <div class="exp-row">
+            <svg viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" fill="none" aria-hidden="true"><circle cx="7" cy="17" r="2.4"/><circle cx="17" cy="17" r="2.4"/><path d="M7 17V6h11l2 6h-13"/></svg>
+            <div><h4>Three Experiences, One Brand</h4><p>Bakery, pastry and specialty coffee, brought together under one identity.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COFFEE ORIGIN ===================== -->
+<section class="origin" id="origin">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Coffee Beans Origin</span>
+      <h2>Sourced from the world's best growing regions.</h2>
+      <p>From selecting quality beans to grinding, brewing and serving — every cup starts with where the bean comes from.</p>
+    </div>
+
+    <div class="origin-cards reveal">
+      <div class="o-card">
+        <div class="o-country">Ethiopia</div>
+        <div class="o-var">Washed</div>
+        <div class="o-notes">Berries, floral, apricot, orange blossom</div>
+      </div>
+      <div class="o-card">
+        <div class="o-country">Brazil</div>
+        <div class="o-var">Red Catuai · Natural</div>
+        <div class="o-notes">Caramel hazelnut, sugar cane, walnut</div>
+      </div>
+      <div class="o-card">
+        <div class="o-country">Colombia</div>
+        <div class="o-var">Natural</div>
+        <div class="o-notes">Orange, rose, white peach, grapes</div>
+      </div>
+      <div class="o-card">
+        <div class="o-country">Colombia</div>
+        <div class="o-var">Decaf · Swiss Water Process</div>
+        <div class="o-notes">Cocoa, nuts, dark chocolate</div>
+      </div>
+    </div>
+
+    <div class="o-chips reveal">
+      <span class="o-chip">Mexico</span>
+      <span class="o-chip">Costa Rica</span>
+      <span class="o-chip">Kenya</span>
+      <span class="o-chip">Indonesia</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCATIONS ===================== -->
+<section class="locations" id="locations">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Locations</span>
+      <h2>Find us in Suez &amp; Cairo.</h2>
+    </div>
+
+    <div class="loc-wrap reveal">
+      <div class="loc-map">
+        <div class="loc-map-inner">
+          <img src="Assets/egypt-map.png" alt="Map of Egypt marking Khamr Elsaleheen locations in Cairo and Suez" class="egypt-map-img" loading="lazy">
+
+          <a class="map-hotspot" style="left:60.28%; top:19.79%;"
+             href="https://maps.app.goo.gl/gNXbRqF67H6Kkrhv7?g_st=ic" target="_blank" rel="noopener noreferrer"
+             aria-label="El Korba, Cairo — get directions"></a>
+
+          <div class="map-hotspot suez-spot" style="left:66.93%; top:28.60%;" tabindex="0" aria-label="Suez branches">
+            <div class="hotspot-menu">
+              <span class="hotspot-menu-title">Suez branches</span>
+              <a href="https://maps.app.goo.gl/dGQ5SZUjtoPxmrfH7?g_st=ic" target="_blank" rel="noopener noreferrer">Al Massa, Suez</a>
+              <a href="https://maps.app.goo.gl/YHVWGjp8RPwpnFAYA?g_st=ic" target="_blank" rel="noopener noreferrer">Nasser, Suez</a>
+            </div>
+          </div>
+        </div>
+        <p class="loc-map-hint">Tap a pin to open directions in Google Maps</p>
+      </div>
+
+      <div class="loc-list">
+        <a class="loc-item" href="https://maps.app.goo.gl/YHVWGjp8RPwpnFAYA?g_st=ic" target="_blank" rel="noopener noreferrer">
+          <div class="pin"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+          <div><span class="since">Since 2020</span><h4>Nasser, Suez</h4><p>Our very first location — where the journey began.</p></div>
+          <svg class="go" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="loc-item" href="https://maps.app.goo.gl/dGQ5SZUjtoPxmrfH7?g_st=ic" target="_blank" rel="noopener noreferrer">
+          <div class="pin"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+          <div><span class="since">Since 2024</span><h4>Al Massa, Suez</h4><p>The branch that introduced the Khamr Elsaleheen name.</p></div>
+          <svg class="go" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="loc-item" href="https://maps.app.goo.gl/gNXbRqF67H6Kkrhv7?g_st=ic" target="_blank" rel="noopener noreferrer">
+          <div class="pin"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+          <div><span class="since">Cairo</span><h4>El Korba, Cairo</h4><p>Our newest branch, bringing the brand to a wider audience.</p></div>
+          <svg class="go" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GROWTH VISION ===================== -->
+<section class="growth">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Growth Vision</span>
+      <h2>Building the future of Khamr Elsaleheen.</h2>
+      <p>Our ambition is to continue developing Khamr Elsaleheen into a recognizable Egyptian brand in bakery, pastry and specialty coffee. As we grow, our focus remains on protecting what makes the brand special.</p>
+    </div>
+    <div class="growth-row reveal">
+      <div class="g-card"><h4>Expand</h4><p>Grow our presence while maintaining our identity.</p></div>
+      <div class="g-card"><h4>Develop</h4><p>Continue improving our products and customer experience.</p></div>
+      <div class="g-card"><h4>Standardize</h4><p>Build consistent standards across locations.</p></div>
+      <div class="g-card"><h4>Innovate</h4><p>Introduce new products and experiences while respecting our roots.</p></div>
+      <div class="g-card"><h4>Build</h4><p>Create a strong, recognizable Egyptian brand with long-term potential.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MENU CTA ===================== -->
+<section class="menu-cta" id="menu">
+  <div class="wrap">
+    <div class="menu-cta-inner reveal">
+      <div class="menu-cta-text">
+        <img src="Assets/slogan-horizontal.png" alt="Tusker hubban la khamran" class="menu-cta-tagline" loading="lazy">
+        <h2>Experience our bakery, pastry &amp; specialty coffee menu.</h2>
+      </div>
+      <a href="https://m-khomrelsalhein-shop.geideapos.net/en/59a82990-a47b-4a9d-8a8f-ec1278251683/shop/category/9be2a000-830f-48f6-b490-66f58496a948" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Explore Online Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER / CONTACT ===================== -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brandmark"><img class="badge-img" src="Assets/badge-logo.png" alt="Khamr Elsaleheen"> Khamr Elsaleheen</a>
+        <img src="Assets/z-logo-white-small.png" alt="خمر الصالحين" class="foot-logo-img" loading="lazy">
+        <p>Bakery, pastry and specialty coffee born in Suez, crafted with care across Egypt.</p>
+      </div>
+
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="tel:01033080019">01033080019</a>
+        <a href="mailto:info@khamrelsaleheen.com">info@khamrelsaleheen.com</a>
+        <a href="https://khamrelsaleheen.com/" target="_blank" rel="noopener noreferrer">khamrelsaleheen.com</a>
+      </div>
+
+      <div class="foot-col">
+        <h5>Locations</h5>
+        <a href="https://maps.app.goo.gl/YHVWGjp8RPwpnFAYA?g_st=ic" target="_blank" rel="noopener noreferrer">Nasser, Suez</a>
+        <a href="https://maps.app.goo.gl/dGQ5SZUjtoPxmrfH7?g_st=ic" target="_blank" rel="noopener noreferrer">Al Massa, Suez</a>
+        <a href="https://maps.app.goo.gl/gNXbRqF67H6Kkrhv7?g_st=ic" target="_blank" rel="noopener noreferrer">El Korba, Cairo</a>
+      </div>
+
+      <div class="foot-col">
+        <h5>Follow Along</h5>
+        <div class="foot-social">
+          <a href="https://www.facebook.com/zmartsuez/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.3C16.5 3.2 15.4 3 14.2 3c-2.5 0-4.2 1.5-4.2 4.3v2.5H7.3v3.2h2.7v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/z_khamr.elsaleheen" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@zmart__?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82c-.9-.86-1.44-1.99-1.5-3.22h-3.02v13.94c0 1.53-1.24 2.77-2.77 2.77-1.53 0-2.77-1.24-2.77-2.77 0-1.53 1.24-2.77 2.77-2.77.28 0 .55.04.8.12v-3.07a5.8 5.8 0 0 0-.8-.06c-3.24 0-5.87 2.63-5.87 5.87 0 3.24 2.63 5.87 5.87 5.87 3.24 0 5.87-2.63 5.87-5.87V9.4a8.94 8.94 0 0 0 4.98 1.52V7.9a5.7 5.7 0 0 1-3.56-2.08z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; 2026 Khamr Elsaleheen. All rights reserved.</span>
+      <span>Suez &middot; Cairo, Egypt</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Burger menu toggle
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }));
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !burger.contains(e.target) && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Arabic story toggle
+  const arToggle = document.getElementById('arToggle');
+  const arBody = document.getElementById('arBody');
+  const arLabel = document.getElementById('arToggleLabel');
+  if (arToggle && arBody && arLabel) {
+    arToggle.addEventListener('click', () => {
+      const show = arBody.classList.toggle('show');
+      arToggle.setAttribute('aria-expanded', show);
+      arLabel.textContent = show ? 'Hide the original Arabic story' : 'Read the original Arabic story';
+    });
+  }
+
+  // Active section highlighting in nav
+  const navAnchors = document.querySelectorAll('nav.links a[data-nav]');
+  const sectionIds = Array.from(navAnchors).map(a => a.getAttribute('data-nav'));
+  const sections = sectionIds
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  function setActive(id){
+    navAnchors.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('data-nav') === id);
+    });
+  }
+
+  if ('IntersectionObserver' in window && sections.length){
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          setActive(entry.target.id);
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    sections.forEach(sec => navIO.observe(sec));
+  }
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
