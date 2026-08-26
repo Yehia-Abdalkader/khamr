@@ -197,7 +197,7 @@
     margin: 0 auto;
     padding: 0 32px;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 0.9fr 1.1fr;
     align-items: center;
     gap: 40px;
     min-height: 540px;
@@ -214,12 +214,24 @@
 
   .hero-left{
     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-slogan-img{
+    width: clamp(200px, 30vw, 300px);
+    height: auto;
+    display: block;
+  }
+
+  .hero-right{
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
   }
   @media (max-width: 900px){
-    .hero-left{
+    .hero-right{
       align-items: center;
     }
   }
@@ -282,18 +294,6 @@
     border-color: var(--cream);
     background: rgba(250,245,234,0.08);
     transform: translateY(-2px);
-  }
-
-  .hero-right{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-slogan-img{
-    width: clamp(200px, 30vw, 300px);
-    height: auto;
-    display: block;
   }
 
   /* ---------- Section basics ---------- */
@@ -603,15 +603,15 @@
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-left">
+      <img src="Assets/slogan-vertical.png" alt="نسكر حبا لا خمرا" class="hero-slogan-img">
+    </div>
+    <div class="hero-right">
       <img src="Assets/z-logo-white-small.png" alt="Khamr Elsaleheen — خمر الصالحين" class="hero-logo-img">
       <img src="Assets/slogan-horizontal.png" alt="للحظة صفا.. وكلمتين من القلب" class="hero-tagline-img">
       <div class="hero-cta-row">
         <a href="#about" class="btn btn-gold">Discover Our Story</a>
         <a href="https://m-khomrelsalhein-shop.geideapos.net/en/59a82990-a47b-4a9d-8a8f-ec1278251683/shop/category/9be2a000-830f-48f6-b490-66f58496a948" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Menu</a>
       </div>
-    </div>
-    <div class="hero-right">
-      <img src="Assets/slogan-vertical.png" alt="نسكر حبا لا خمرا" class="hero-slogan-img">
     </div>
   </div>
 </section>
