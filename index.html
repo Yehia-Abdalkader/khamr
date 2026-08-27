@@ -197,7 +197,8 @@
     margin: 0 auto;
     padding: 0 32px;
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
+     grid-template-columns: 1fr;
+    justify-items: center;
     align-items: center;
     gap: 40px;
     min-height: 540px;
@@ -220,10 +221,10 @@
   }
 
   .hero-slogan-img{
-    width: 350px;
+    width: 280.73px;
     max-width: 100%;
-    height: 480px;
-    aspect-ratio: 732 / 965;
+    height: auto;
+    aspect-ratio: 280.73 / 370.08;
     object-fit: contain;
     display: block;
     margin: 0 auto;
@@ -582,6 +583,190 @@
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
     font-size:0.8rem; color: rgba(250,245,234,0.5);
   }
+
+  /* ---------- Gallery ---------- */
+  .gallery-section{ background: var(--cream-deep); }
+
+  .gallery-filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin: -12px 0 40px;
+  }
+
+  .gallery-pill{
+    font-family:'Cairo', sans-serif;
+    font-size:0.76rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color: #5c584d;
+    background: var(--cream);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:9px 18px 9px 14px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition: background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
+  }
+
+  .gallery-pill .dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:currentColor;
+    opacity:0.55;
+  }
+
+  .gallery-pill:hover{
+    border-color: var(--ink-green-deep);
+    color: var(--ink-green-deep);
+    transform: translateY(-1px);
+  }
+
+  .gallery-pill.active{
+    background: var(--ink-green-deep);
+    border-color: var(--ink-green-deep);
+    color: var(--cream);
+  }
+
+  .gallery-pill.active .dot{ opacity:1; }
+
+  .gallery-pill[data-filter="branches"].active{ background: var(--ink-green); border-color: var(--ink-green); }
+  .gallery-pill[data-filter="drinks"].active{ background: var(--maroon); border-color: var(--maroon); }
+  .gallery-pill[data-filter="beans"].active{ background: var(--gold); border-color: var(--gold); color: var(--ink-green-deep); }
+
+  .gallery-masonry{
+    column-count:1;
+    column-gap:20px;
+  }
+  @media (min-width:640px){ .gallery-masonry{ column-count:2; } }
+  @media (min-width:1020px){ .gallery-masonry{ column-count:3; } }
+
+  .g-tile{
+    position:relative;
+    break-inside:avoid;
+    margin-bottom:20px;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow: 0 10px 22px -12px rgba(12,36,26,0.28), 0 2px 6px -2px rgba(12,36,26,0.14);
+    cursor:pointer;
+    transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease;
+  }
+
+  .g-tile.filtered-out,
+  .g-tile.row-hidden{ display:none; }
+
+  .g-tile:hover,
+  .g-tile:focus-within{
+    transform: translateY(-6px);
+    box-shadow: 0 22px 34px -16px rgba(12,36,26,0.38), 0 6px 12px -4px rgba(12,36,26,0.2);
+  }
+
+  .g-tile img{
+    display:block;
+    width:100%;
+    height:auto;
+    transition: transform .6s ease;
+  }
+
+  .g-tile:hover img{ transform: scale(1.045); }
+
+  .g-tile-overlay{
+    position:absolute;
+    inset:0;
+    background: linear-gradient(to top, rgba(12,36,26,0.88) 0%, rgba(12,36,26,0.35) 42%, rgba(12,36,26,0) 66%);
+    opacity:0;
+    transition: opacity .3s ease;
+  }
+
+  .g-tile:hover .g-tile-overlay,
+  .g-tile:focus-within .g-tile-overlay{ opacity:1; }
+
+  .g-tile-caption{
+    position:absolute;
+    left:16px; right:16px; bottom:14px;
+    color: var(--cream);
+    opacity:0;
+    transform: translateY(8px);
+    transition: opacity .3s ease .04s, transform .35s cubic-bezier(.2,.7,.3,1) .04s;
+  }
+
+  .g-tile:hover .g-tile-caption,
+  .g-tile:focus-within .g-tile-caption{
+    opacity:1;
+    transform: translateY(0);
+  }
+
+  .g-tile-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'Cairo', sans-serif;
+    font-size:0.68rem;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+
+  .g-tile-tag .dot{ width:6px; height:6px; border-radius:50%; }
+
+  .g-tile-title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.15rem;
+    font-weight:500;
+    line-height:1.25;
+    color:#fff;
+  }
+
+  .g-tag-branches .dot{ background:#7fa79c; } .g-tag-branches{ color:#a9c7bd; }
+  .g-tag-drinks   .dot{ background: var(--gold-light); } .g-tag-drinks{ color: var(--gold-light); }
+  .g-tag-beans    .dot{ background:#e0b45c; } .g-tag-beans{ color:#e8d19a; }
+
+  .gallery-view-more{
+    display:flex;
+    justify-content:center;
+    margin-top:8px;
+  }
+
+  .gallery-view-more.is-hidden{ display:none; }
+
+  .gallery-view-more-btn{
+    font-family:'Cairo', sans-serif;
+    font-size:0.8rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color: var(--cream);
+    background: var(--ink-green-deep);
+    border:1px solid var(--ink-green-deep);
+    border-radius:100px;
+    padding:12px 26px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition: background .2s ease, border-color .2s ease, transform .15s ease;
+  }
+
+  .gallery-view-more-btn:hover{
+    background: var(--maroon-deep);
+    border-color: var(--maroon-deep);
+    transform: translateY(-1px);
+  }
+
+  .gallery-view-more-btn .arrow{ transition: transform .25s ease; }
+  .gallery-view-more-btn.expanded .arrow{ transform: rotate(180deg); }
+
+  @media (prefers-reduced-motion: reduce){
+    .g-tile, .g-tile img, .g-tile-overlay, .g-tile-caption, .gallery-pill, .gallery-view-more-btn, .gallery-view-more-btn .arrow{
+      transition:none !important;
+    }
+    .g-tile:hover{ transform:none; }
+  }
 </style>
 </head>
 <body>
@@ -595,6 +780,7 @@
       <a href="#what-we-do" data-nav="what-we-do">What We Do</a>
       <a href="#journey" data-nav="journey">Journey</a>
       <a href="#locations" data-nav="locations">Locations</a>
+      <a href="#gallery" data-nav="gallery">Gallery</a>
       <a href="#contact" data-nav="contact">Contact</a>
       <a class="nav-cta" href="https://m-khomrelsalhein-shop.geideapos.net/en/59a82990-a47b-4a9d-8a8f-ec1278251683/shop/category/9be2a000-830f-48f6-b490-66f58496a948" target="_blank" rel="noopener noreferrer">View Menu</a>
     </nav>
@@ -605,9 +791,6 @@
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <div class="hero-left">
-      <img src="Assets/slogan-vertical.png" alt="نسكر حبا لا خمرا" class="hero-slogan-img">
-    </div>
     <div class="hero-right">
       <img src="Assets/z-logo-white-small.png" alt="Khamr Elsaleheen — خمر الصالحين" class="hero-logo-img">
       <img src="Assets/slogan-horizontal.png" alt="للحظة صفا.. وكلمتين من القلب" class="hero-tagline-img">
@@ -1010,18 +1193,35 @@
   </div>
 </section>
 
-<!-- ===================== MENU CTA ===================== -->
-<section class="menu-cta" id="menu">
+<!-- ===================== GALLERY ===================== -->
+<section class="gallery-section" id="gallery">
   <div class="wrap">
-    <div class="menu-cta-inner reveal">
-      <div class="menu-cta-text">
-        <img src="Assets/slogan-horizontal.png" alt="Tusker hubban la khamran" class="menu-cta-tagline" loading="lazy">
-        <h2>Experience our bakery, pastry &amp; specialty coffee menu.</h2>
-      </div>
-      <a href="https://m-khomrelsalhein-shop.geideapos.net/en/59a82990-a47b-4a9d-8a8f-ec1278251683/shop/category/9be2a000-830f-48f6-b490-66f58496a948" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Explore Online Menu</a>
+    <div class="section-head reveal">
+      <span class="eyebrow">Field Notes</span>
+      <h2>Photographs from the Z floor.</h2>
+      <p>A running record of our branches, drinks and beans — shot on the days nothing was staged.</p>
+    </div>
+
+    <div class="gallery-filters reveal" role="group" aria-label="Filter photos by category">
+      <button class="gallery-pill active" data-filter="all"><span class="dot"></span>All</button>
+      <button class="gallery-pill" data-filter="branches"><span class="dot"></span>Branches</button>
+      <button class="gallery-pill" data-filter="drinks"><span class="dot"></span>Drinks</button>
+      <button class="gallery-pill" data-filter="beans"><span class="dot"></span>Beans</button>
+    </div>
+
+    <div class="gallery-masonry reveal" id="galleryMasonry">
+      <!-- tiles injected by JS -->
+    </div>
+
+    <div class="gallery-view-more" id="galleryViewMoreRow">
+      <button class="gallery-view-more-btn" id="galleryViewMoreBtn">
+        <span class="label">View more</span>
+        <span class="arrow">↓</span>
+      </button>
     </div>
   </div>
 </section>
+
 
 <!-- ===================== FOOTER / CONTACT ===================== -->
 <footer id="contact">
@@ -1125,6 +1325,108 @@
       });
     }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
     sections.forEach(sec => navIO.observe(sec));
+  }
+
+  // Gallery
+  const galleryPhotos = [
+    { cat:"drinks",   label:"Drinks",   title:"Turkish coffee, morning batch",   seed:"khamr-01", w:800, h:1000 },
+    { cat:"branches", label:"Branches", title:"Corner table, Al Massa branch",   seed:"khamr-02", w:800, h:640  },
+    { cat:"beans",    label:"Beans",    title:"First crack, Ethiopia lot",       seed:"khamr-03", w:800, h:900  },
+    { cat:"branches", label:"Branches", title:"Storefront, Nasser, Suez",        seed:"khamr-04", w:800, h:1080 },
+    { cat:"drinks",   label:"Drinks",   title:"Cortado, marble counter",         seed:"khamr-05", w:800, h:760  },
+    { cat:"branches", label:"Branches", title:"Bakery counter, 6am",             seed:"khamr-06", w:800, h:1000 },
+    { cat:"beans",    label:"Beans",    title:"Green beans, sample tray",        seed:"khamr-07", w:800, h:680  },
+    { cat:"branches", label:"Branches", title:"Signage, Al Massa, Suez",         seed:"khamr-08", w:800, h:900  },
+    { cat:"branches", label:"Branches", title:"Pastry shelving, house display",  seed:"khamr-09", w:800, h:1140 },
+    { cat:"drinks",   label:"Drinks",   title:"Iced specialty brew, close up",   seed:"khamr-10", w:800, h:820  },
+    { cat:"beans",    label:"Beans",    title:"Cooling tray after roast",        seed:"khamr-11", w:800, h:960  },
+    { cat:"branches", label:"Branches", title:"Entrance, El Korba, Cairo",       seed:"khamr-12", w:800, h:700  },
+    { cat:"branches", label:"Branches", title:"Front window, closing time",      seed:"khamr-13", w:800, h:820  },
+    { cat:"drinks",   label:"Drinks",   title:"Latte art, oat milk",             seed:"khamr-14", w:800, h:1000 },
+    { cat:"beans",    label:"Beans",    title:"Cupping notes, Thursday",         seed:"khamr-15", w:800, h:1060 },
+  ];
+
+  const galleryMasonry = document.getElementById('galleryMasonry');
+  const galleryViewMoreRow = document.getElementById('galleryViewMoreRow');
+  const galleryViewMoreBtn = document.getElementById('galleryViewMoreBtn');
+
+  if (galleryMasonry && galleryViewMoreRow && galleryViewMoreBtn) {
+    const galleryViewMoreLabel = galleryViewMoreBtn.querySelector('.label');
+
+    galleryMasonry.innerHTML = galleryPhotos.map((p) => `
+      <div class="g-tile" data-category="${p.cat}" tabindex="0">
+        <img src="https://picsum.photos/seed/${p.seed}/${p.w}/${p.h}" alt="${p.title}" loading="lazy">
+        <div class="g-tile-overlay"></div>
+        <div class="g-tile-caption">
+          <span class="g-tile-tag g-tag-${p.cat}"><span class="dot"></span>${p.label}</span>
+          <p class="g-tile-title">${p.title}</p>
+        </div>
+      </div>
+    `).join('');
+
+    const galleryPills = document.querySelectorAll('.gallery-pill');
+    const allGalleryTiles = Array.from(document.querySelectorAll('.g-tile'));
+
+    let galleryExpanded = false;
+
+    function getGalleryColumnCount(){
+      const w = window.innerWidth;
+      if (w >= 1020) return 3;
+      if (w >= 640) return 2;
+      return 1;
+    }
+
+    function getVisibleGalleryTiles(){
+      return allGalleryTiles.filter(t => !t.classList.contains('filtered-out'));
+    }
+
+    function applyGalleryRowLimit(){
+      const visible = getVisibleGalleryTiles();
+      const rowsToShow = 2;
+      const cutoff = getGalleryColumnCount() * rowsToShow;
+
+      visible.forEach((tile, i) => {
+        const shouldHide = !galleryExpanded && i >= cutoff;
+        tile.classList.toggle('row-hidden', shouldHide);
+      });
+
+      const hasMore = visible.length > cutoff;
+      galleryViewMoreRow.classList.toggle('is-hidden', !hasMore);
+      galleryViewMoreLabel.textContent = galleryExpanded ? 'View less' : 'View more';
+      galleryViewMoreBtn.classList.toggle('expanded', galleryExpanded);
+    }
+
+    galleryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        galleryPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
+
+        allGalleryTiles.forEach(tile => {
+          const match = filter === 'all' || tile.dataset.category === filter;
+          tile.classList.toggle('filtered-out', !match);
+        });
+
+        galleryExpanded = false;
+        applyGalleryRowLimit();
+      });
+    });
+
+    galleryViewMoreBtn.addEventListener('click', () => {
+      galleryExpanded = !galleryExpanded;
+      applyGalleryRowLimit();
+      if (!galleryExpanded) {
+        document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    let galleryResizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(galleryResizeTimer);
+      galleryResizeTimer = setTimeout(applyGalleryRowLimit, 150);
+    });
+
+    applyGalleryRowLimit();
   }
 
   // Reveal on scroll
