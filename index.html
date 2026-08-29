@@ -587,57 +587,6 @@
   /* ---------- Gallery ---------- */
   .gallery-section{ background: var(--cream-deep); }
 
-  .gallery-filters{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin: -12px 0 40px;
-  }
-
-  .gallery-pill{
-    font-family:'Cairo', sans-serif;
-    font-size:0.76rem;
-    font-weight:600;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color: #5c584d;
-    background: var(--cream);
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:9px 18px 9px 14px;
-    cursor:pointer;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    transition: background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
-  }
-
-  .gallery-pill .dot{
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:currentColor;
-    opacity:0.55;
-  }
-
-  .gallery-pill:hover{
-    border-color: var(--ink-green-deep);
-    color: var(--ink-green-deep);
-    transform: translateY(-1px);
-  }
-
-  .gallery-pill.active{
-    background: var(--ink-green-deep);
-    border-color: var(--ink-green-deep);
-    color: var(--cream);
-  }
-
-  .gallery-pill.active .dot{ opacity:1; }
-
-  .gallery-pill[data-filter="branches"].active{ background: var(--ink-green); border-color: var(--ink-green); }
-  .gallery-pill[data-filter="drinks"].active{ background: var(--maroon); border-color: var(--maroon); }
-  .gallery-pill[data-filter="beans"].active{ background: var(--gold); border-color: var(--gold); color: var(--ink-green-deep); }
-
   .gallery-masonry{
     column-count:1;
     column-gap:20px;
@@ -656,7 +605,6 @@
     transition: transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease;
   }
 
-  .g-tile.filtered-out,
   .g-tile.row-hidden{ display:none; }
 
   .g-tile:hover,
@@ -700,20 +648,6 @@
     transform: translateY(0);
   }
 
-  .g-tile-tag{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-family:'Cairo', sans-serif;
-    font-size:0.68rem;
-    font-weight:600;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    margin-bottom:6px;
-  }
-
-  .g-tile-tag .dot{ width:6px; height:6px; border-radius:50%; }
-
   .g-tile-title{
     font-family:'Cormorant Garamond', serif;
     font-size:1.15rem;
@@ -722,14 +656,10 @@
     color:#fff;
   }
 
-  .g-tag-branches .dot{ background:#7fa79c; } .g-tag-branches{ color:#a9c7bd; }
-  .g-tag-drinks   .dot{ background: var(--gold-light); } .g-tag-drinks{ color: var(--gold-light); }
-  .g-tag-beans    .dot{ background:#e0b45c; } .g-tag-beans{ color:#e8d19a; }
-
   .gallery-view-more{
     display:flex;
     justify-content:center;
-    margin-top:8px;
+    margin-top:20px;
   }
 
   .gallery-view-more.is-hidden{ display:none; }
@@ -762,7 +692,7 @@
   .gallery-view-more-btn.expanded .arrow{ transform: rotate(180deg); }
 
   @media (prefers-reduced-motion: reduce){
-    .g-tile, .g-tile img, .g-tile-overlay, .g-tile-caption, .gallery-pill, .gallery-view-more-btn, .gallery-view-more-btn .arrow{
+    .g-tile, .g-tile img, .g-tile-overlay, .g-tile-caption, .gallery-view-more-btn, .gallery-view-more-btn .arrow{
       transition:none !important;
     }
     .g-tile:hover{ transform:none; }
@@ -1197,16 +1127,9 @@
 <section class="gallery-section" id="gallery">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Field Notes</span>
-      <h2>Photographs from the Z floor.</h2>
-      <p>A running record of our branches, drinks and beans — shot on the days nothing was staged.</p>
-    </div>
-
-    <div class="gallery-filters reveal" role="group" aria-label="Filter photos by category">
-      <button class="gallery-pill active" data-filter="all"><span class="dot"></span>All</button>
-      <button class="gallery-pill" data-filter="branches"><span class="dot"></span>Branches</button>
-      <button class="gallery-pill" data-filter="drinks"><span class="dot"></span>Drinks</button>
-      <button class="gallery-pill" data-filter="beans"><span class="dot"></span>Beans</button>
+      <span class="eyebrow">Gallery</span>
+      <h2>Photographs from Khamr Elsaleheen.</h2>
+      <p>A running record of our branches, bakery, and specialty coffee.</p>
     </div>
 
     <div class="gallery-masonry reveal" id="galleryMasonry">
@@ -1328,22 +1251,14 @@
   }
 
   // Gallery
+  // Add or edit photo paths below (e.g. "Assets/korpa_1.png" or { src: "Assets/korpa_1.png", title: "Caption" })
   const galleryPhotos = [
-    { cat:"drinks",   label:"Drinks",   title:"Turkish coffee, morning batch",   seed:"khamr-01", w:800, h:1000 },
-    { cat:"branches", label:"Branches", title:"Corner table, Al Massa branch",   seed:"khamr-02", w:800, h:640  },
-    { cat:"beans",    label:"Beans",    title:"First crack, Ethiopia lot",       seed:"khamr-03", w:800, h:900  },
-    { cat:"branches", label:"Branches", title:"Storefront, Nasser, Suez",        seed:"khamr-04", w:800, h:1080 },
-    { cat:"drinks",   label:"Drinks",   title:"Cortado, marble counter",         seed:"khamr-05", w:800, h:760  },
-    { cat:"branches", label:"Branches", title:"Bakery counter, 6am",             seed:"khamr-06", w:800, h:1000 },
-    { cat:"beans",    label:"Beans",    title:"Green beans, sample tray",        seed:"khamr-07", w:800, h:680  },
-    { cat:"branches", label:"Branches", title:"Signage, Al Massa, Suez",         seed:"khamr-08", w:800, h:900  },
-    { cat:"branches", label:"Branches", title:"Pastry shelving, house display",  seed:"khamr-09", w:800, h:1140 },
-    { cat:"drinks",   label:"Drinks",   title:"Iced specialty brew, close up",   seed:"khamr-10", w:800, h:820  },
-    { cat:"beans",    label:"Beans",    title:"Cooling tray after roast",        seed:"khamr-11", w:800, h:960  },
-    { cat:"branches", label:"Branches", title:"Entrance, El Korba, Cairo",       seed:"khamr-12", w:800, h:700  },
-    { cat:"branches", label:"Branches", title:"Front window, closing time",      seed:"khamr-13", w:800, h:820  },
-    { cat:"drinks",   label:"Drinks",   title:"Latte art, oat milk",             seed:"khamr-14", w:800, h:1000 },
-    { cat:"beans",    label:"Beans",    title:"Cupping notes, Thursday",         seed:"khamr-15", w:800, h:1060 },
+    { src: "Assets/korpa_1.png", title: "El Korba Branch" },
+    { src: "Assets/korpa_2.png", title: "Specialty Coffee & Pastry" },
+    { src: "Assets/korpa_3.png", title: "Khamr Elsaleheen Ambiance" },
+    { src: "Assets/korpa_4.png", title: "Freshly Baked Every Morning" },
+    { src: "Assets/korpa_5.png", title: "Handcrafted Delights" },
+    { src: "Assets/korpa_6.png", title: "Our Community & Atmosphere" },
   ];
 
   const galleryMasonry = document.getElementById('galleryMasonry');
@@ -1353,20 +1268,23 @@
   if (galleryMasonry && galleryViewMoreRow && galleryViewMoreBtn) {
     const galleryViewMoreLabel = galleryViewMoreBtn.querySelector('.label');
 
-    galleryMasonry.innerHTML = galleryPhotos.map((p) => `
-      <div class="g-tile" data-category="${p.cat}" tabindex="0">
-        <img src="https://picsum.photos/seed/${p.seed}/${p.w}/${p.h}" alt="${p.title}" loading="lazy">
+    galleryMasonry.innerHTML = galleryPhotos.map((p) => {
+      const src = typeof p === 'string' ? p : p.src;
+      const title = typeof p === 'object' && p.title ? p.title : '';
+      const alt = typeof p === 'object' && (p.alt || p.title) ? (p.alt || p.title) : 'Khamr Elsaleheen';
+      return `
+      <div class="g-tile" tabindex="0">
+        <img src="${src}" alt="${alt}" loading="lazy">
+        ${title ? `
         <div class="g-tile-overlay"></div>
         <div class="g-tile-caption">
-          <span class="g-tile-tag g-tag-${p.cat}"><span class="dot"></span>${p.label}</span>
-          <p class="g-tile-title">${p.title}</p>
-        </div>
+          <p class="g-tile-title">${title}</p>
+        </div>` : ''}
       </div>
-    `).join('');
+    `;
+    }).join('');
 
-    const galleryPills = document.querySelectorAll('.gallery-pill');
     const allGalleryTiles = Array.from(document.querySelectorAll('.g-tile'));
-
     let galleryExpanded = false;
 
     function getGalleryColumnCount(){
@@ -1376,41 +1294,20 @@
       return 1;
     }
 
-    function getVisibleGalleryTiles(){
-      return allGalleryTiles.filter(t => !t.classList.contains('filtered-out'));
-    }
-
     function applyGalleryRowLimit(){
-      const visible = getVisibleGalleryTiles();
       const rowsToShow = 2;
       const cutoff = getGalleryColumnCount() * rowsToShow;
 
-      visible.forEach((tile, i) => {
+      allGalleryTiles.forEach((tile, i) => {
         const shouldHide = !galleryExpanded && i >= cutoff;
         tile.classList.toggle('row-hidden', shouldHide);
       });
 
-      const hasMore = visible.length > cutoff;
+      const hasMore = allGalleryTiles.length > cutoff;
       galleryViewMoreRow.classList.toggle('is-hidden', !hasMore);
       galleryViewMoreLabel.textContent = galleryExpanded ? 'View less' : 'View more';
       galleryViewMoreBtn.classList.toggle('expanded', galleryExpanded);
     }
-
-    galleryPills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        galleryPills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        const filter = pill.dataset.filter;
-
-        allGalleryTiles.forEach(tile => {
-          const match = filter === 'all' || tile.dataset.category === filter;
-          tile.classList.toggle('filtered-out', !match);
-        });
-
-        galleryExpanded = false;
-        applyGalleryRowLimit();
-      });
-    });
 
     galleryViewMoreBtn.addEventListener('click', () => {
       galleryExpanded = !galleryExpanded;
